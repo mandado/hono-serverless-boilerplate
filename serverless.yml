@@ -1,0 +1,42 @@
+service: hono-serverless-boilerplate
+frameworkVersion: "3"
+useDotenv: true
+
+configValidationMode: error
+
+package:
+  individually: true
+  patterns:
+    - "!node_modules/**"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: api/index.handler
+    timeout: 30
+    events:
+      - httpApi: "*"
+  my_function:
+    handler: functions/index.handler
+
+plugins:
+  - serverless-esbuild
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
+  esbuild:
+    format: cjs
+    packager: pnpm
+    bundle: true
+    minify: false
+    sourcemap: false
+    keepNames: true
+    define:
+      require.resolve: undefined
+    platform: node

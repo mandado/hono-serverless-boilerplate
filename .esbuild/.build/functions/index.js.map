@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../functions/index.ts"],
+  "sourcesContent": ["import { LambdaEvent } from \"hono/aws-lambda\";\n\nexport async function handler(event: LambdaEvent) {\n  return {\n    message: 'Go Serverless v3! Your function executed successfully!',\n    input: event,\n  };\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,eAAsB,QAAQ,OAAoB;AAChD,SAAO;AAAA,IACL,SAAS;AAAA,IACT,OAAO;AAAA,EACT;AACF;",
+  "names": []
+}

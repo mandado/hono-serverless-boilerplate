@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "test": "vitest",
+    "format": "npx @biomejs/biome format . --write ",
+    "lint": "npx @biomejs/biome lint .",
+    "offline": "sls offline --reloadHandler",
+    "g:module": "hygen api module"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.17.11",
+    "hygen": "^6.2.11",
+    "npm-run-all": "^4.1.5",
+    "serverless": "^3.38.0",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-esbuild": "^1.50.0",
+    "serverless-offline": "^13.3.0",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2",
+    "vitest": "^1.0.1"
+  },
+  "dependencies": {
+    "@freshgum/typedi": "^0.7.0",
+    "@hono/swagger-ui": "^0.2.0",
+    "@hono/zod-openapi": "^0.9.3",
+    "@hono/zod-validator": "^0.1.11",
+    "@t3-oss/env-core": "^0.7.1",
+    "globby": "^14.0.0",
+    "hono": "^3.11.3",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.8.0",
+    "zod": "^3.22.4"
+  }
+}
